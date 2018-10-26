@@ -9,7 +9,7 @@ Software Engineering Project 2018-2019
 6) Mahmoud ibrahiem
 7) Mohand Gamal 
 8) Mohned Mohamed
-9) Mostafa Ezz Eldien
+9) Mostafa Mohamed Ezz Eldien
 10) Mostafa Mohamed
 11) Samir Mossad
 12) Zyad Mohamed
