@@ -63,5 +63,20 @@ public function edit($old_student_id,$student_id, $course_id, $degree, $examine_
 	  
 
 }
+  
+//.........................//
+public function customgrades()
+{
+ $sql="SELECT students.name, courses.name, grades.degree, courses.max_degree FROM grades JOIN students ON students.id = grades.student_id JOIN courses ON courses.id = grades.course_id ORDER BY students.name, courses.name";
+ $stmt=$this->conn->prepare($sql);
+ $stmt->execute();
+ $grades_inf=[];
+ while($grade=$stmt->fetch(PDO::FETCH_ASSOC))
+ {
+ 	 $grades_inf[]=$grade;
+
+ }
+ return $grades_inf;
+}   
 }
 ?>

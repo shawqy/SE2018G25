@@ -13,7 +13,8 @@
         <div class= "links">
             <a href="courses/readintablecourse.php">Courses</a>
             <a href="student/readintable.php">Students</a>
-            <a href="grades/readintablegrade.php">Grades</a>
+            <a href="grades/readintablegrade.php" >Grades</a>
+            <a href="student/customgrades.php" >List</a>
         </div>
     </body>
 </html>

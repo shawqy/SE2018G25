@@ -71,7 +71,21 @@ public function delete($id)
 	  $stmt->execute();
 
 }
+public function customgrades()
+{
+ $sql="SELECT student.name AS 'sn', courses.name, grades.degree, courses.max_degree FROM grades JOIN student ON student.id = grades.student_id JOIN courses ON courses.id = grades.course_id ORDER BY student.name, courses.name";
+ $stmt=$this->conn->prepare($sql);
+ $stmt->execute();
+ $grades_inf=[];
+ while($grade=$stmt->fetch(PDO::FETCH_ASSOC))
+ {
+ 	 $grades_inf[]=$grade;
 
+ }
+ return $grades_inf;
+}   
+
+    
 
 }
 ?>

@@ -55,6 +55,7 @@ $students=new student($conn);
         </table>
         <?php 
         echo "<a href='addformstudent.php'>Add</a>"  ;
+       
         ?> 
     </body>
 </html>
