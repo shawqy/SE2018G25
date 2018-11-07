@@ -35,7 +35,7 @@ $courses=new courses($conn);
 
             foreach ($courses_inf as $course) {
              
-             echo" <tr> <td>".$course['id']."</td> <td>".$course['name']."</td> <td>".$course['max_degree']."</td>  <td>".$course['study_year']."</td> </tr>";
+             echo" <tr> <td>".$course['id']."</td> <td>".$course['name']."</td> <td>".$course['max_degree']."</td>  <td>".$course['study_year']."</td> <td><a href='deletecourse.php?id=".$course['id']."'>Delete</a></td> <td><a href='editformcourse.php?id=".$course['id']."&&name=".$course['name']."&&max_degree=".$course['max_degree']."&&study_year=".$course['study_year']."'>EDIT</a></td> </tr>";
             }  
           
             }

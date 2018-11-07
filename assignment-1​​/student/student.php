@@ -65,6 +65,7 @@ public function delete($id)
  $stmt->execute();
 
 } public function edit($new,$old) {  
+	
 	$sql="UPDATE student SET name='$new'WHERE name='$old'"; 
 	 $stmt=$this->conn->prepare($sql); 
 	  $stmt->execute();

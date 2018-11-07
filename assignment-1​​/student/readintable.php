@@ -9,7 +9,7 @@ $students=new student($conn);
   <html>
     <body>  
      <form action="readintable.php"  method="POST">
-     <input type="text" name="name" value="rody">
+     <input type="text" name="name" value="student_name">
      <input type="submit" name="submit"  value="search">
 
      </form>
