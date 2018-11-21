@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>TechFix</title>
+        <link rel="stylesheet" href="navbar_style.css">
+    </head>
+    <body>
+        <nav>
+            <ul class="topnav" id="dropdownClick">
+                <li class ="active"><img  src="Resources/hq%20logo.png" style="height: 43px;"></li>
+                <li><a href="#home">Home</a></li>
+                <li class="topnav-right"><a href="#vision">Vision</a></li>
+                <li class="topnav-right"><a href="#about">About US</a></li>
+                <li class="dropdownIcon"><a href="javascript:void(0);" onclick="dropdownMenu()">&#9776;</a></li>
+            </ul>
+        </nav>
+        <footer class="footsy">
+            <div class="row">
+                <div class="col-6 mobileStack">
+                    <h3>All Copyrights Reserved</h3>
+                    <ul>
+                        <li>@TechFix Team 19</li>
+                        <li>Third Computer Engineering</li>
+                        <li>Cairo,Egypt</li>
+                    </ul>
+                </div>
+                <div class="col-6 mobileStack">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li>Num: +1061061402</li>
+                        <li>Email:Techfixteam@tech.com</li>
+                        <li>Ain Shams University</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <script>
+            function dropdownMenu(){
+                var x = document.getElementById("dropdownClick");
+                if(x.className==="topnav"){
+                    x.className += " responsive";
+                    /*change topnav to topnav.responsive*/
+                }
+                else{
+                    x.className="topnav";
+                }
+            }
+        </script>
+    </body>
+</html>
