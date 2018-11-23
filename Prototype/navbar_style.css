@@ -9,8 +9,8 @@ body{
 }
 nav{
     width: 100%;
-    margin: 0;
-}
+
+    margin: 0;}
 nav ul{
     background-color: #eee;
     overflow: hidden;
@@ -91,10 +91,10 @@ footer.footsy ul li{
     line-height: 1.5;
 }
 footer{
-    position: absolute;
+   /* position: absolute;
      right: 0;
      bottom: 0;
-     left: 0;
+     left: 0; */
 }
 
 /*################Mobile#############*/
