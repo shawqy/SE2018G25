@@ -1,3 +1,69 @@
+.hema{
+margin-top: 40px;
+margin-bottom: 50px;
+    margin-left: 70px;
+color: white;
+font-size: 240%;
+text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing:1px;
+    word-spacing: 4px;
+}
+.btn:link,
+.btn:visited{
+      display: inline;
+    padding: 15px 30px;
+    font-size: 110%;
+    font-weight: 300;
+    text-decoration: none;
+  transition: background-color 0.2s, border 0.2s ,color 0.2s;
+    border-radius: 25px;
+    margin-left: 70px;
+     border: 1.5px solid #e67e22;
+    color: #e67e22;
+}
+
+.btn:active,
+.btn:hover{
+    background-color: #cf6d17;
+     border: 1.5px solid #cf6d17;
+     color: white;
+    margin-left: 70px;
+}
+
+
+
+
+.hero-text-box{
+    width: 1140px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin-top: 30px;
+  
+}
+.logo{
+    display: inline-block;
+    height: 250px;
+    width: auto;
+     margin-top:30px;
+    margin-left:20px;
+    border: 5px solid #e67e22;
+   
+}
+.elf{
+    display: inline-block;
+    position: absolute;
+    top:80px;
+    right: 10px;
+}
+
+
+
+
+
+
 nav,
 header,
 footer{
@@ -6,6 +72,11 @@ footer{
 body{
     line-height: 1;
     margin: 0;
+     background-image:linear-gradient(rgba(0 , 0, 0, 0.50),rgba(0, 0, 0, 0.50)),url(t.jpg);
+      height: 100vh;
+        
+
+    background-position: center;
 }
 nav{
     width: 100%;
