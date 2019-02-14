@@ -19,16 +19,23 @@ $endhour=$_POST['endhour'];
 $gender=$_POST['gender'];
 $age=$_POST['age'];
 $cat=$_POST['Categroy'];
-//$photo=$_POST['photo']
-$query = "INSERT INTO `request technician` (Email,Password,Name,Phone,WorkshopAddress,startHour,endHour,Gender,age,Categroy) ";
-$query .= "VALUES ('$email','$password','$name','$mobile','$address','$startHour','$endhour','$gender','$age','$cat')";
+$about = $_POST['aboutTech'];
+
+$filename=addslashes($_FILES["img"]["name"]);
+$tmpname=addslashes(file_get_contents($_FILES["img"]["tmp_name"]));
+$filetype=addslashes($_FILES["img"]["type"]);
+$array=array('jpg','jpeg','PNG');
+$ext=pathinfo($filename,PATHINFO_EXTENSION);
+
+
+$query = "INSERT INTO `request technician` (Email,Password,Name,Phone,WorkshopAddress,startHour,endHour,Gender,age,Categroy,Photo,about) ";
+$query .= "VALUES ('$email','$password','$name','$mobile','$address','$startHour','$endhour','$gender','$age','$cat','$tmpname','$about')";
 $stml=$connection->prepare($query);
 $stml->execute();
     
 }
 
 ?>
-
 
 <!doctype html>
 <html>
@@ -42,7 +49,7 @@ $stml->execute();
      <img src="logo.png" id="photo"> 
      <img src="515.png" id="Tech">
      <div class="registration">
-     <form method="post" id="register" action="Technician.php">
+     <form method="post" id="register" action="Technician.php" enctype="multipart/form-data">
          <label style="text-align: center; font-size: 30px;">Join Our Technicians</label>
          <br><br>
           <label>Name :</label><br>
@@ -83,11 +90,22 @@ $stml->execute();
          <input type="radio" name="gender" value="female" id="male">&nbsp; Female
          <br><br><br>
 
-         <label>Photo :</label><br>
-         <input type="file" name="photo"> <br> <br>
+         
 
+
+         <label>Photo :</label><br>
+         <input type="file" name="img"> <br> <br>
+
+         <label>About :</label><br>
+         <textarea rows="4" cols="50" name="aboutTech"></textarea>
+          <br>
+          <br>
          <input type="submit" value="Submit" name="req" id="sub">
-         <br>
+        
+
+         
+
+         <br><br>
       </form>      
   </div>       
  </body>

@@ -19,13 +19,17 @@ $name = $_POST['name'];
 $mobile = $_POST['mobile'];
 $address = $_POST['address'];
 $gender=$_POST['radio'];
-$photo =$_FILE['photo'];// m4 3arf 2zay abasy L sora fe database
+$filename=addslashes($_FILES["img"]["name"]);
+$tmpname=addslashes(file_get_contents($_FILES["img"]["tmp_name"]));
+$filetype=addslashes($_FILES["img"]["type"]);
+$array=array('jpg','jpeg','PNG');
+$ext=pathinfo($filename,PATHINFO_EXTENSION);
 
 //1 for male
 //0 for female
 
-$query = "INSERT INTO `client` (Email,Password,Name,Phone,Address,Gender) ";
-$query .= "VALUES ('$email','$password','$name','$mobile','$address','$gender')";
+$query = "INSERT INTO `client` (Email,Password,Name,Phone,Address,Gender,Photo) ";
+$query .= "VALUES ('$email','$password','$name','$mobile','$address','$gender','$tmpname')";
 $stml=$connection->prepare($query);
 $stml->execute();
     
@@ -70,7 +74,7 @@ $stml->execute();
          <br><br>
          <!-- -->
          <label>Photo :</label><br>
-         <input type="file" name="photo"> <br> <br>
+         <input type="file" name="img"> <br> <br>
 <!-- ======================= Gender that will be sent to database ==================================== -->
          
          <br><br>
