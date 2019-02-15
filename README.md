@@ -16,9 +16,10 @@ suitable for your problem, by giving you previous feedbacks about him/her from
 other previous clients. TechFix also informs you about the working hours of that
 technician, and his/her address if you want to go to the workshop yourself.
 Client
-# Whitepaper: https://drive.google.com/file/d/1PnBiGoPqyA-IdU5wsvjIs4rJsX5dNxe9/view?usp=sharing
-# BRD: https://drive.google.com/file/d/1ygdwJ0DIzNLh-aOqs42pxVaQvgfgPXBr/view?usp=sharing
-# SRS: https://drive.google.com/file/d/1uLrq9HtnEUIZ8HBow55KWFZInSk0nVky/view?usp=sharing
+
+# Whitepaper: https://bit.ly/2N7FnjG
+# BRD: https://bit.ly/2GKf6qy
+# SRS: https://bit.ly/2Gw7NmW
 # our Web site : http://techfixsef2019.atwebpages.com
 
 
